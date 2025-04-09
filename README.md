@@ -65,6 +65,9 @@ In [application.properties](src/main/resources/application.properties) you can c
 ```redis.pubsub.consumer-count``` - To configure the number of consumers
 ```message.processing.reporting.rate.ms``` - The reporting rate in milliseconds (defaults to 3000)
 
+## Testing notes
+In order for the integration test to run, it requires to have a running docker environment on the machine.
+
 ## Future improvements
 
 1. Even though the current solution "simulates" distribution on one JVM, the solution is ready to support actual distributed consumers on separate instances, since each consumer is acquiring the right to process through a Redis Lock.
